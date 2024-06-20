@@ -25,22 +25,24 @@ public class Date implements Serializable
 	public static Date nowDate()
 	{
 		Date newDate = new Date();
-		newDate.year = Calendar.getInstance().get(Calendar.YEAR);
-		newDate.month = Calendar.getInstance().get(Calendar.MONTH) + 1;
-		newDate.day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
-		newDate.hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-		newDate.minute = Calendar.getInstance().get(Calendar.MINUTE);
-		newDate.second = Calendar.getInstance().get(Calendar.SECOND);
+		Calendar c = Calendar.getInstance();
+		newDate.year   = c.get(Calendar.YEAR);
+		newDate.month  = c.get(Calendar.MONTH) + 1;
+		newDate.day    = c.get(Calendar.DAY_OF_MONTH);
+		newDate.hour   = c.get(Calendar.HOUR_OF_DAY);
+		newDate.minute = c.get(Calendar.MINUTE);
+		newDate.second = c.get(Calendar.SECOND);
 		return newDate;
 	}
 	public void setNowDate()
 	{
-		year = Calendar.getInstance().get(Calendar.YEAR);
-		month = Calendar.getInstance().get(Calendar.MONTH) + 1;
-		day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
-		hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-		minute = Calendar.getInstance().get(Calendar.MINUTE);
-		second = Calendar.getInstance().get(Calendar.SECOND);
+		Calendar c = Calendar.getInstance();
+		year   = c.get(Calendar.YEAR);
+		month  = c.get(Calendar.MONTH) + 1;
+		day    = c.get(Calendar.DAY_OF_MONTH);
+		hour   = c.get(Calendar.HOUR_OF_DAY);
+		minute = c.get(Calendar.MINUTE);
+		second = c.get(Calendar.SECOND);
 	}
 	public int getYear()
 	{
